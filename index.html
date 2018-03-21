@@ -1,0 +1,86 @@
+<html>
+	<head>
+	<script>
+	var imagenes = [ 
+		"1.png",
+		"2.png",
+		"3.png",
+		"4.png",
+		"5.png",
+		"6.png",
+		"7.png",
+		"8.png",
+		"9.png",
+		"10.png"
+	];
+var contador=0;
+function manejarEvento(ev){
+	if(ev.target.innerText === ev.target.innerText){
+		contador++;
+		document.getElementById("marcador").value=contador;
+	}else alert("Por favor seleccione otra casilla");
+}
+	</script>
+	<style>
+#tablero div div
+{
+	visibility: visible;
+	border-style: solid;
+	border-color: aliceblue;
+	border-width: 2px;
+	display: table-cell;
+	width: 100px;
+	height: 100px;
+	margin-left: 100px;
+	text-align: center;
+	font-size: 0px;
+	vertical-align: middle;
+}	
+
+#tablero div
+{
+	background-color: indigo;
+	padding: 4px;
+	border-width: 5px;
+	margin: 8px;
+	display: table-row;
+}
+
+	</style>
+	</head>
+	<body>
+	<div id="tablero" onClick="manejarEvento(event)">
+		<div>
+			<div class="9"><img src="img/9.png">9</div>
+			<div class="8"><img src="img/8.png">8</div>
+			<div class="7"><img src="img/7.png">7</div>
+			<div class="6"><img src="img/6.png">6</div>
+			<div class="5"><img src="img/5.png">5</div>
+		</div>
+		<div>
+			<div class="4"><img src="img/4.png">4</div>
+			<div class="3"><img src="img/3.png">3</div>
+			<div class="2"><img src="img/2.png">2</div>
+			<div class="1"><img src="img/1.png">1</div>
+			<div class="10"><img src="img/10.png">10</div>
+		</div>
+		<div>
+			<div class="9"><img src="img/9.png">9</div>
+			<div class="8"><img src="img/8.png">8</div>
+			<div class="7"><img src="img/7.png">7</div>
+			<div class="6"><img src="img/6.png">6</div>
+			<div class="5"><img src="img/5.png">5</div>
+		</div>
+		<div>
+			<div class="4"><img src="img/4.png">4</div>
+			<div class="3"><img src="img/3.png">3</div>
+			<div class="2"><img src="img/2.png">2</div>
+			<div class="1"><img src="img/1.png">1</div>
+			<div class="10"><img src="img/10.png">10</div>
+		</div>
+	</div>
+	<div id="puntaje">
+		<input type="text" id="marcador"/>
+	</div>
+	</body>
+</html>
